@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/script.js"></script>
+    <title>Ask About Weather</title>
+</head>
+<body>
+
+<h1>Weather App</h1>
+
+<label for="country">Pick Country:</label>
+<select id="country" >
+    <option value="Pakistan">Pakistan</option>
+  <option value="Germany">Germany</option>
+  <option value="England">England</option>
+</select>
+
+<label for="city">Pick City:</label>
+<select id="city">
+    <option value="Islamabad">Islamabad</option>
+    <option value="London">London</option>
+    <option value="Berlin">Berlin</option>
+</select>
+
+<button onclick="fetchWeatherData()">Get Weather</button>
+
+<p>Temperature: <span id="temperature"></span></p>
+<p>Humidity: <span id="humidity"></span></p>
+<p>Wind Speed: <span id="wind-speed"></span></p>
+
+</body>
+</html>
