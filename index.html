@@ -1,32 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="/script.js"></script>
-    <title>Ask About Weather</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Weather App</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <style>
+		body {
+			background-image: url("/1.jpeg");
+			background-repeat: repeat;
+			background-size: 100% ;
+		}
+	</style>
 
-<h1>Weather App</h1>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5 mb-3 ">WEATHER APP</h1>
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <select class="form-control" id="country">
+              <option value="" selected disabled>Select a country</option>
+              <option value="USA">USA</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Australia">Australia</option>
+              <option value="India">India</option>
+            </select>
+          </div>
+        </div>
 
-<label for="country">Pick Country:</label>
-<select id="country" >
-    <option value="Pakistan">Pakistan</option>
-  <option value="Germany">Germany</option>
-  <option value="England">England</option>
-</select>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="form-group">
+            <label for="city">City:</label>
+            <select class="form-control" id="city" disabled>
+              <option value="" selected disabled>Select a city</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-<label for="city">Pick City:</label>
-<select id="city">
-    <option value="Islamabad">Islamabad</option>
-    <option value="London">London</option>
-    <option value="Berlin">Berlin</option>
-</select>
-
-<button onclick="fetchWeatherData()">Get Weather</button>
-
-<p>Temperature: <span id="temperature"></span></p>
-<p>Humidity: <span id="humidity"></span></p>
-<p>Wind Speed: <span id="wind-speed"></span></p>
-
-</body>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title mb-3">Current Weather</h3>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <p>Temperature:</p>
+                </div>
+                <div class="col-6">
+                  <p id="temp"></p>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <p>Humidity:</p>
+                </div>
+                <div class="col-6">
+                  <p id="humidity"></p>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <p>Wind Speed:</p>
+                </div>
+                <div class="col-6">
+                  <p id="wind-speed"></p>
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary" id="btn-get-weather" disabled>Get Weather</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>   
 </html>
