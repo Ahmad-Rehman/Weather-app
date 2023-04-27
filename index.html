@@ -6,22 +6,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
     <style>
 		body {
-			background-image: url("/1.jpeg");
-			background-repeat: repeat;
-			background-size: 100% ;
+			background-color: rgb(43, 128, 161);
+      
 		}
+
+    label {
+      font-size: large;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .card {
+      margin-top: 20px;
+      font: 15px sans-serif;
+    }
+    .container {
+      margin-top: 100px;
+    }
+
+    .card-title {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 30px;
+    }
 	</style>
 
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center mt-5 mb-3 ">WEATHER APP</h1>
+      
       <div class="row justify-content-center">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="form-group">
-            <label for="country">Country:</label>
+            <label for="country">Country :</label>
             <select class="form-control" id="country">
-              <option value="" selected disabled>Select a country</option>
+              <option value="" selected disabled>Select a Country</option>
               <option value="USA">USA</option>
               <option value="Turkey">Turkey</option>
               <option value="Australia">Australia</option>
@@ -32,9 +50,9 @@
 
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="form-group">
-            <label for="city">City:</label>
+            <label for="city">City :</label>
             <select class="form-control" id="city" disabled>
-              <option value="" selected disabled>Select a city</option>
+              <option value="" selected disabled>Select a City</option>
             </select>
           </div>
         </div>
@@ -47,7 +65,7 @@
               <h3 class="card-title mb-3">Current Weather</h3>
               <div class="row mb-3">
                 <div class="col-6">
-                  <p>Temperature:</p>
+                  <p>Temperature : </p>
                 </div>
                 <div class="col-6">
                   <p id="temp"></p>
@@ -55,7 +73,7 @@
               </div>
               <div class="row mb-3">
                 <div class="col-6">
-                  <p>Humidity:</p>
+                  <p>Humidity :</p>
                 </div>
                 <div class="col-6">
                   <p id="humidity"></p>
@@ -63,7 +81,7 @@
               </div>
               <div class="row mb-3">
                 <div class="col-6">
-                  <p>Wind Speed:</p>
+                  <p>Wind Speed :</p>
                 </div>
                 <div class="col-6">
                   <p id="wind-speed"></p>
